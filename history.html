@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History | Bintang Menggala</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --accent-color: #ffffff;
+            --text-muted: #666666;
+            --line-color: #1a1a1a;
+            --transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--accent-color); font-family: 'Segoe UI', sans-serif; line-height: 1.8; overflow-x: hidden; }
+
+        nav { display: flex; justify-content: flex-end; padding: 40px 8%; position: fixed; width: 100%; z-index: 100; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; transition: 0.3s; }
+        nav ul li a:hover { opacity: 1; border-bottom: 1px solid white; }
+
+        main { padding: 120px 10% 120px; max-width: 900px; }
+        .page-title { font-size: 10px; letter-spacing: 10px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 40px; }
+        .history-content h2 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -2px; line-height: 1.1; margin-bottom: 60px; }
+
+        .timeline-entry { margin-bottom: 80px; border-top: 1px solid var(--line-color); padding-top: 40px; }
+        .entry-year { font-size: 12px; letter-spacing: 4px; color: var(--text-muted); margin-bottom: 20px; }
+        .entry-title { font-size: 1.5rem; font-weight: 400; margin-bottom: 15px; letter-spacing: 1px; }
+        .entry-desc { color: #999; max-width: 600px; font-weight: 300; }
+
+        footer { padding: 60px 10%; border-top: 1px solid var(--line-color); text-align: center; font-size: 9px; letter-spacing: 4px; color: #333; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p class="page-title">Chronicles</p>
+        <div class="history-content">
+            <h2>Membangun Fondasi Jaringan & Presisi Mekanikal.</h2>
+
+            <div class="timeline-entry">
+                <p class="entry-year">PRESENT EDUCATION</p>
+                <h3 class="entry-title">SMKN 7 Bandar Lampung</h3>
+                <p class="entry-desc">Menempuh pendidikan vokasi pada jurusan Teknik Komputer dan Jaringan.</p>
+            </div>
+
+            <div class="timeline-entry">
+                <p class="entry-year">CORE EXPERTISE</p>
+                <h3 class="entry-title">Network Administration</h3>
+                <p class="entry-desc">Memiliki kemampuan dalam konfigurasi perangkat MikroTik, manajemen bandwidth, serta implementasi Mikhmon untuk sistem manajemen hotspot yang efisien dan terstruktur.</p>
+            </div>
+
+            <div class="timeline-entry">
+                <p class="entry-year">TECHNICAL EXPLORATION</p>
+                <h3 class="entry-title">ThinkPad Tuning & Mechanical Study</h3>
+                <p class="entry-desc">Eksperimen optimasi perangkat keras ThinkPad X240 dan studi mendalam mengenai sistem hidrolik alat berat sebagai hobi teknikal yang presisi.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 BINTANG MENGGALA</footer>
+
+</body>
+</html>

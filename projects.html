@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Bintang Menggala</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --accent-color: #ffffff;
+            --text-muted: #666666;
+            --line-color: #1a1a1a;
+            --transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--accent-color); font-family: 'Segoe UI', sans-serif; line-height: 1.8; }
+
+        nav { display: flex; justify-content: flex-end; padding: 40px 8%; position: fixed; width: 100%; z-index: 100; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { color: white; text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; transition: 0.3s; }
+        nav ul li a:hover { opacity: 1; border-bottom: 1px solid white; }
+
+        main { padding: 120px 10%; }
+        .page-title { font-size: 10px; letter-spacing: 10px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 40px; }
+
+        .project-card { border: 1px solid var(--line-color); padding: 40px; margin-bottom: 40px; transition: var(--transition); }
+        .project-card:hover { border-color: #333; background: #0d0d0d; }
+        .project-tag { font-size: 9px; color: #444; letter-spacing: 3px; text-transform: uppercase; border: 1px solid #222; padding: 5px 10px; display: inline-block; margin-bottom: 20px; }
+        
+        /* Highlight untuk target PKL */
+        .target-tag { border-color: #ffffff; color: #ffffff; }
+
+        .project-card h3 { font-size: 1.8rem; font-weight: 300; margin-bottom: 15px; }
+        .tech-specs { list-style: none; margin-top: 20px; border-left: 1px solid #222; padding-left: 20px; }
+        .tech-specs li { font-size: 11px; color: var(--text-muted); margin-bottom: 5px; }
+        .tech-specs b { color: #888; }
+
+        footer { padding: 60px 10%; border-top: 1px solid var(--line-color); text-align: center; font-size: 9px; letter-spacing: 4px; color: #333; text-transform: uppercase; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="history.html">History</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <p class="page-title">Technical Projects & Roadmap</p>
+
+        <div class="project-card" style="border-color: #333;">
+            <div class="project-tag target-tag">Upcoming Roadmap</div>
+            <h3>Industrial Internship: PT Telkom Indonesia</h3>
+            <p style="color: #999;">Target Praktik Kerja Lapangan (PKL) untuk mendalami infrastruktur telekomunikasi nasional dan manajemen jaringan skala besar.</p>
+            <ul class="tech-specs">
+                <li><b>FIELD:</b> Network Infrastructure & Maintenance</li>
+                <li><b>OBJECTIVE:</b> Hands-on experience with ISP-grade systems</li>
+                <li><b>LOCATION:</b> Telkom Indonesia</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project-tag">Hardware Optimization</div>
+            <h3>ThinkPad X240 Performance Tuning</h3>
+            <p style="color: #999;">Optimasi sistem pada perangkat keras spesifikasi rendah untuk mencapai performa maksimal.</p>
+            <ul class="tech-specs">
+                <li><b>METHOD:</b> XML Configuration & Thermal Management</li>
+                <li><b>RESULT:</b> Optimized AAA Gaming Performance</li>
+            </ul>
+        </div>
+
+        <div class="project-card">
+            <div class="project-tag">Industrial Study</div>
+            <h3>Heavy Machinery Hydraulic Systems</h3>
+            <p style="color: #999;">Analisis teknikal pada sistem hidrolik unit Excavator.</p>
+            <ul class="tech-specs">
+                <li><b>FOCUS:</b> Hydraulic pressure & ICE Mechanics</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>&copy; 2026 BINTANG MENGGALA</footer>
+
+</body>
+</html>

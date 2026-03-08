@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bintang Menggala | Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --accent-color: #ffffff;
+            --text-muted: #888888;
+            --transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--accent-color);
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Global */
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 40px 8%;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+        }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 30px; }
+        nav ul li a { 
+            color: white; text-decoration: none; font-size: 11px; 
+            letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; transition: 0.3s; 
+        }
+        nav ul li a:hover { opacity: 1; border-bottom: 1px solid white; }
+
+        /* Loader */
+        .loader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: black; z-index: 9999; display: flex;
+            justify-content: center; align-items: center; transition: var(--transition);
+        }
+        .loader h1 { letter-spacing: 15px; font-weight: 300; animation: pulse 2s infinite alternate; }
+        @keyframes pulse { from { opacity: 0.1; } to { opacity: 1; } }
+
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at 20% 50%, #1a1a1a 0%, #0a0a0a 100%);
+        }
+
+        .hero-content h2 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 700; letter-spacing: -3px; line-height: 1; }
+
+        section { padding: 100px 10%; border-top: 1px solid #1a1a1a; }
+        .section-title { font-size: 10px; letter-spacing: 6px; color: #444; margin-bottom: 50px; text-transform: uppercase; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 60px; }
+        .bio-item span { font-size: 10px; color: var(--text-muted); display: block; }
+        .bio-item p { font-size: 1.5rem; font-weight: 300; }
+
+        .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .image-wrapper { border: 1px solid #1a1a1a; padding: 10px; overflow: hidden; background: #050505; }
+        .image-wrapper img { width: 100%; height: auto; filter: grayscale(100%); transition: var(--transition); display: block; }
+        .image-wrapper img:hover { filter: grayscale(0%); transform: scale(1.03); }
+
+        footer { padding: 80px 10%; text-align: center; font-size: 10px; color: #333; letter-spacing: 3px; }
+    </style>
+</head>
+<body>
+
+    <div class="loader"><h1>BINTANG MENGGALA</h1></div>
+
+    <nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="projects.html">Projects</a></li>
+    </ul>
+</nav>
+    <header>
+        <div class="hero-content">
+            <h2>NOC & Network<br>Infrastructure</h2>
+            <p style="color: #888; margin-top: 20px;">Precision in every connection, power in every machine.</p>
+        </div>
+    </header>
+
+    <section id="about">
+        <h3 class="section-title">Personal Data</h3>
+        <div class="grid">
+            <div class="bio-item"><span>NAME</span><p>Bintang Menggala</p></div>
+            <div class="bio-item"><span>VOCATIONAL</span><p>Computer & Network Engineering</p></div>
+            <div class="bio-item"><span>RESIDENCE</span><p>Bandar Lampung, ID</p></div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h3 class="section-title">Visual Archive</h3>
+        <div class="image-grid">
+            <div class="image-wrapper">
+                <img src="foto1.jpeg" alt="Work Site">
+                <p style="font-size: 10px; color: #555; margin-top: 10px;">PROJECT ANALYSIS - SITE 01</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="foto2.jpeg" alt="Heavy Machinery">
+                <p style="font-size: 10px; color: #555; margin-top: 10px;">HEAVY EQUIPMENT - UNIT ANALYSIS</p>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>&copy; 2026 BINTANG MENGGALA</p></footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 800);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
