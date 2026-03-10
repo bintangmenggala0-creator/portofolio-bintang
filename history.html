@@ -1,37 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>History | Bintang Menggala</title>
+    <title>Technical Archive | Bintang Menggala</title>
     <style>
         :root {
             --bg-color: #0a0a0a;
             --accent-color: #ffffff;
-            --text-muted: #666666;
-            --line-color: #1a1a1a;
-            --transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            --text-muted: #888888;
+            --border-color: #1a1a1a;
+            --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg-color); color: var(--accent-color); font-family: 'Segoe UI', sans-serif; line-height: 1.8; overflow-x: hidden; }
 
-        nav { display: flex; justify-content: flex-end; padding: 40px 8%; position: fixed; width: 100%; z-index: 100; background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); }
+        body {
+            background-color: var(--bg-color);
+            color: var(--accent-color);
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Global - No Blur, Solid Background */
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 40px 5%;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            background: #0a0a0a; /* Solid Black */
+        }
+
         nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 30px; }
-        nav ul li a { color: white; text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.5; transition: 0.3s; }
-        nav ul li a:hover { opacity: 1; border-bottom: 1px solid white; }
+        nav ul li { margin-left: 40px; }
+        nav ul li a { 
+            color: white; text-decoration: none; font-size: 11px; 
+            letter-spacing: 3px; text-transform: uppercase; opacity: 0.5; transition: 0.3s; 
+        }
+        nav ul li a:hover { opacity: 1; }
 
-        main { padding: 120px 10% 120px; max-width: 900px; }
-        .page-title { font-size: 10px; letter-spacing: 10px; color: var(--text-muted); text-transform: uppercase; margin-bottom: 40px; }
-        .history-content h2 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; letter-spacing: -2px; line-height: 1.1; margin-bottom: 60px; }
+        /* Header Style - Sharp & Minimalist */
+        header {
+            padding: 200px 5% 40px 5%;
+            text-align: center;
+            background: #0a0a0a; /* No Gradients */
+        }
 
-        .timeline-entry { margin-bottom: 80px; border-top: 1px solid var(--line-color); padding-top: 40px; }
-        .entry-year { font-size: 12px; letter-spacing: 4px; color: var(--text-muted); margin-bottom: 20px; }
-        .entry-title { font-size: 1.5rem; font-weight: 400; margin-bottom: 15px; letter-spacing: 1px; }
-        .entry-desc { color: #999; max-width: 600px; font-weight: 300; }
+        header h2 { 
+            font-size: clamp(2rem, 5vw, 3.5rem); 
+            font-weight: 700; 
+            letter-spacing: 12px; 
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
 
-        footer { padding: 60px 10%; border-top: 1px solid var(--line-color); text-align: center; font-size: 9px; letter-spacing: 4px; color: #333; text-transform: uppercase; }
+        header p { color: var(--text-muted); margin: 0 auto; max-width: 600px; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; }
+
+        /* Main Content - Ultra Wide */
+        section { padding: 40px 3% 120px 3%; }
+        
+        .section-title { 
+            font-size: 10px; 
+            letter-spacing: 12px; 
+            color: #222; 
+            margin-bottom: 60px; 
+            text-transform: uppercase; 
+            text-align: center;
+            display: block;
+        }
+
+        /* Grid Layout - 3 Kolom Masif Sejajar */
+        .image-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            width: 100%;
+        }
+
+        .image-wrapper { 
+            background: #000000; 
+            border: 1px solid var(--border-color);
+            padding: 0; 
+            transition: var(--transition);
+            overflow: hidden;
+        }
+
+        .image-wrapper:hover { border-color: #ffffff; }
+
+        /* Image Focus 16:9 */
+        .image-wrapper img { 
+            width: 100%; 
+            aspect-ratio: 16 / 9; 
+            object-fit: cover; 
+            filter: grayscale(100%); 
+            transition: var(--transition); 
+            display: block; 
+        }
+
+        .image-wrapper:hover img { filter: grayscale(0%); transform: scale(1.05); }
+
+        /* Deskripsi Tengah (Centered Info) */
+        .image-info { 
+            padding: 40px 20px; 
+            text-align: center;
+        }
+
+        .image-info span { 
+            font-size: 9px; 
+            letter-spacing: 6px; 
+            color: var(--text-muted); 
+            font-weight: 700; 
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .image-info p { 
+            font-size: 12px; 
+            color: var(--accent-color); 
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        footer { 
+            padding: 80px 5%; 
+            text-align: center; 
+            font-size: 10px; 
+            color: #1a1a1a; 
+            letter-spacing: 8px; 
+            border-top: 1px solid var(--border-color);
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 1100px) {
+            .image-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -39,37 +146,48 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="history.html">History</a></li>
+            <li><a href="history.html" style="opacity: 1; border-bottom: 1px solid white;">History</a></li>
             <li><a href="projects.html">Projects</a></li>
         </ul>
     </nav>
 
-    <main>
-        <p class="page-title">Chronicles</p>
-        <div class="history-content">
-            <h2>Membangun Fondasi Jaringan & Presisi Mekanikal.</h2>
+    <header>
+        <h2>Archive</h2>
+        <p>Technical Infrastructure Documentation</p>
+    </header>
 
-            <div class="timeline-entry">
-                <p class="entry-year">PRESENT EDUCATION</p>
-                <h3 class="entry-title">SMKN 7 Bandar Lampung</h3>
-                <p class="entry-desc">Menempuh pendidikan vokasi pada jurusan Teknik Komputer dan Jaringan.</p>
+    <section id="gallery">
+        <span class="section-title">Log System</span>
+        <div class="image-grid">
+            
+            <div class="image-wrapper">
+                <img src="foto1.jpeg" alt="Cisco Packet Tracer">
+                <div class="image-info">
+                    <span>SIMULASI TOPOLOGI</span>
+                    <p>CISCO PACKET TRACER</p>
+                </div>
             </div>
 
-            <div class="timeline-entry">
-                <p class="entry-year">CORE EXPERTISE</p>
-                <h3 class="entry-title">Network Administration</h3>
-                <p class="entry-desc">Memiliki kemampuan dalam konfigurasi perangkat MikroTik, manajemen bandwidth, serta implementasi Mikhmon untuk sistem manajemen hotspot yang efisien dan terstruktur.</p>
+            <div class="image-wrapper">
+                <img src="foto2.jpeg" alt="MikroTik Config">
+                <div class="image-info">
+                    <span>SYSTEM-CONFIGURATION</span>
+                    <p>MIKROTIK CONFIG</p>
+                </div>
             </div>
 
-            <div class="timeline-entry">
-                <p class="entry-year">TECHNICAL EXPLORATION</p>
-                <h3 class="entry-title">ThinkPad Tuning & Mechanical Study</h3>
-                <p class="entry-desc">Eksperimen optimasi perangkat keras ThinkPad X240 dan studi mendalam mengenai sistem hidrolik alat berat sebagai hobi teknikal yang presisi.</p>
+            <div class="image-wrapper">
+                <img src="foto4.jpeg" alt="Mikhmon Voucher">
+                <div class="image-info">
+                    <span>MIKHMON-CONFIGURATION</span>
+                    <p>VOUCHER SYSTEM</p>
+                </div>
             </div>
+
         </div>
-    </main>
+    </section>
 
-    <footer>&copy; 2026 BINTANG MENGGALA</footer>
+    <footer><p>&copy; 2026 BINTANG MENGGALA</p></footer>
 
 </body>
 </html>

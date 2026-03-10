@@ -67,8 +67,9 @@
         .bio-item span { font-size: 10px; color: var(--text-muted); display: block; }
         .bio-item p { font-size: 1.5rem; font-weight: 300; }
 
-        .image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .image-wrapper { border: 1px solid #1a1a1a; padding: 10px; overflow: hidden; background: #050505; }
+        /* Gallery Centering */
+        .image-grid { display: flex; justify-content: center; }
+        .image-wrapper { border: 1px solid #1a1a1a; padding: 10px; overflow: hidden; background: #050505; max-width: 500px; width: 100%; }
         .image-wrapper img { width: 100%; height: auto; filter: grayscale(100%); transition: var(--transition); display: block; }
         .image-wrapper img:hover { filter: grayscale(0%); transform: scale(1.03); }
 
@@ -98,8 +99,10 @@
         <h3 class="section-title">Personal Data</h3>
         <div class="grid">
             <div class="bio-item"><span>NAME</span><p>Bintang Menggala</p></div>
-            <div class="bio-item"><span>VOCATIONAL</span><p>Computer & Network Engineering</p></div>
-            <div class="bio-item"><span>RESIDENCE</span><p>Bandar Lampung, ID</p></div>
+            <div class="bio-item">
+                <span>PRESENT EDUCATION</span>
+                <p>Computer Network Engineering at SMKN 7 Bandar Lampung, ID</p>
+            </div>
         </div>
     </section>
 
@@ -107,16 +110,8 @@
         <h3 class="section-title">Visual Archive</h3>
         <div class="image-grid">
             <div class="image-wrapper">
-                <img src="foto1.jpeg" alt="Work Site">
-                <p style="font-size: 10px; color: #555; margin-top: 10px;">PROJECT ANALYSIS - SITE 01</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="foto2.jpeg" alt="Heavy Machinery">
-                <p style="font-size: 10px; color: #555; margin-top: 10px;">HEAVY EQUIPMENT - UNIT ANALYSIS</p>
-            </div>
-            <div class="image-wrapper">
-                <img src="foto3.jpeg" alt="Network Setup">
-                <p style="font-size: 10px; color: #555; margin-top: 10px;">FOTO BINTANG - SELF PICTURE</p>
+                <img src="foto3.jpeg" alt="Self Picture">
+                <p style="font-size: 10px; color: #555; margin-top: 10px; text-align: center;">FOTO PRIBADI - SELF PICTURE</p>
             </div>
         </div>
     </section>
